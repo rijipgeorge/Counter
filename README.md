@@ -1,27 +1,34 @@
-# Count
+#Beginner level tasks
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+Create a simple counter
+> A button, and a text. Text should be having value '0' first. Upon clicking the button, it should be incrementing each time.
 
-## Development server
+Create a two way counter
+> A + button, - button, and a text. Text should be having value '0' first. Upon clicking the + button, it should be incrementing each time. Upon clicking the - button, it should be decrementing each time.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Create an advanced counter
+> A + button, - button, a textbox with default value '1' and a text with value '0' at first. Same as two way counter, but, the value incrementing should be the value in the textbox. 
 
-## Code scaffolding
+Simple ListView
+> Show a list of something ( For example - list of students, each student would have firstname, lastname, email, gender -  The list can be shown in an ul>li tag )
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Listview with delete option
+> Same as above - but right next to each student's details - there should be a button which says delete. And clicking on the button should delete the row (student) from the listview.
 
-## Build
+Create a form
+> Create a form with these fields and an 'Add' button
+> ```
+    firstname textbox
+    lastname textbox
+    email email
+    gender radio button - with male and female
+> ```
+> Upon clicking the 'Add' button, the form details should be shown
+> below the form in a html table
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+Listview with create form
+> Same listview as above and create a form combined - upon clicking on the submit - the new student should be appended to the list. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+listview with edit option
+> Same as above + editing option - there should be an Edit button right next to the delete button. Clicking on the edit button should populate the corresponding student data in the form. And then the user can update the form values and click on the 'Update' button. (While the edit button is clicked the form's button should be changed from 'Add' to 'Update'. Updating the form and clicking the 'Update' button should update the corresponding entry in the listview.)
