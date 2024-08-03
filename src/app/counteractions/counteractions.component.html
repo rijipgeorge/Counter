@@ -1,6 +1,6 @@
-
 <div>
     <h1>Counter: {{ counter }}</h1>
+    <input type="number" (input)="setStep($event)" placeholder="Step value" />
     <button (click)="increaseCounter()">+</button>
     <button (click)="decreaseCounter()">-</button>
   </div>

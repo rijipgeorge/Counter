@@ -11,11 +11,13 @@ export class AddandsubComponent {
   counter: number = 0;
 
   increaseCounter() {
+    debugger;
     this.counter += 1;
   }
 
   decreaseCounter() {
+    debugger;
     this.counter -= 1;
 
-}
+  }
 }
