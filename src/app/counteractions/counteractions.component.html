@@ -1,7 +1,12 @@
 <div>
-    <h1>Counter: {{ counter }}</h1>
-    <input type="number" (input)="setStep($event)" placeholder="Step value" />
+    <!-- Input box for the user to enter the step value -->
+    <input type="number" (input)="setStep($event)" placeholder="Enter value" />
+  
+    <!-- Buttons to increase and decrease the counter -->
     <button (click)="increaseCounter()">+</button>
     <button (click)="decreaseCounter()">-</button>
+  
+    <!-- Display the current value of the counter -->
+    <p>Current Counter Value: {{ counter }}</p>
   </div>
   

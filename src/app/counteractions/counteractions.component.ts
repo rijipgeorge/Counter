@@ -5,26 +5,35 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './counteractions.component.html',
-  styleUrl: './counteractions.component.css'
+  styleUrls: ['./counteractions.component.css']
 })
 export class CounteractionsComponent {
-  step: number=0;
-  counter: number = 0;
-increaseCounter() {
-  this.counter += 1;
-}
-decreaseCounter() {
-  this.counter -= 1;
-}
+  counter: number = 0; // The current value of the counter
+  step: number = 1; // The value to increment or decrement by
 
+  // Method to set the step value from the input box
   setStep(event: Event) {
-    const target = event.target as HTMLElement; // First assert as HTMLElement
-    if (target instanceof HTMLInputElement) {
-        this.step = Number(target.value) || 1; // Directly use target.value
+    // Use type assertion to ensure event.target is treated as HTMLInputElement
+    const inputElement = event.target as HTMLInputElement | null;
+
+    // Check if inputElement is not null
+    if (inputElement) {
+      // Convert the input value to a number and assign it to step
+      this.step = Number(inputElement.value) || 1;
     } else {
-        this.step = 1; // Default value if target is not an HTMLInputElement
+      // Handle the case where inputElement is null (if necessary)
+      console.warn('Input element is null');
+      this.step = 1;
     }
-}
+  }
 
+  // Method to increase the counter by the step value
+  increaseCounter() {
+    this.counter += this.step;
+  }
 
+  // Method to decrease the counter by the step value
+  decreaseCounter() {
+    this.counter -= this.step;
+  }
 }
